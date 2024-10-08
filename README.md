@@ -31,3 +31,72 @@ A real-time chat application that allows multiple users to communicate anonymous
 
    ```bash
    git clone https://github.com/potthuri-charan/Anonymous-Chat.git
+
+Navigate to the project directory:
+
+bash
+Copy code
+cd Anonymous-Chat
+Install the dependencies:
+
+bash
+Copy code
+npm install
+Set up the MySQL database:
+
+Create a .env file in the root of your project and add the following details:
+
+bash
+Copy code
+DB_HOST=localhost
+DB_USER=your_mysql_username
+DB_PASSWORD=your_mysql_password
+DB_NAME=your_database_name
+Replace your_mysql_username, your_mysql_password, and your_database_name with your actual MySQL credentials.
+
+Run the server:
+
+bash
+Copy code
+node server.js
+The server should now be running on http://localhost:3000.
+
+Usage
+Sign up:
+
+Open the application in your browser at http://localhost:3000/signup.
+Create a new user account by providing a username and password.
+Log in:
+
+After signing up, log in with your credentials at http://localhost:3000/login.
+Start Chatting:
+
+Once logged in, you will be redirected to the chat room. Start sending messages, and they will be visible to all users in real-time.
+To log out, click the Logout button, and you will be redirected to the login page.
+Project Structure
+bash
+Copy code
+.
+├── public
+│   ├── chat.html         # The main chat interface
+│   ├── login.html        # Login page
+│   ├── signup.html       # Signup page
+│   ├── styles.css        # CSS for styling the pages
+├── routes
+│   ├── auth.js           # Handles user authentication (login, signup)
+├── views
+│   ├── index.html        # Main entry page
+├── server.js             # The main server file
+├── package.json          # NPM dependencies and scripts
+└── README.md             # Project documentation
+Future Improvements
+Private Chat Rooms: Adding support for private chat rooms between users.
+User Profiles: Enhance user profiles with avatars and status updates.
+Message Persistence: Store chat history in a database for future retrieval.
+Contributing
+If you'd like to contribute to this project, feel free to fork the repository and submit a pull request.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Developed with ❤️ by Potthuri Charan
