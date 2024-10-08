@@ -109,9 +109,6 @@ A real-time chat application that enables users to communicate anonymously. This
 
 Contributions are welcome! If you'd like to improve this project, feel free to fork the repository, make changes, and submit a pull request.
 
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
 
 ---
 
