@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    flex-direction: column; /* Stack navbar and container vertically */
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/19136.jpg'); /* Adjust path accordingly */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between heading and logout button */
+    align-items: center; /* Center items vertically */
+    background-color: rgba(51, 51, 51, 0.8); /* Dark background with transparency for navbar */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for navbar */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack messages and form vertically */
+    align-items: center; /* Center content horizontally */
+    width: 100%;
+    flex-grow: 1; /* Allow the container to grow and fill space */
+    padding: 20px; /* Optional: padding for container */
+}
+
+h1 {
+    margin: 0; /* Remove default margin */
+}
+
+#logout {
+    background-color: red; /* Set background color to red */
+    color: white; /* Set text color to white */
+    border: none; /* Remove border */
+    padding: 10px 15px; /* Padding for the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 5px; /* Optional: rounded corners */
+    font-size: 16px; /* Optional: font size */
+}
+
+#logout:hover {
+    background-color: darkred; /* Darker red on hover */
+}
+
+#messages {
+    margin: 20px 0;
+    height: 300px; /* Set a height for the messages container */
+    overflow-y: auto; /* Enable scrolling */
+    border: 1px solid #ccc; /* Optional: border around messages */
+    background-color: rgba(255, 255, 255, 0.8); /* White background with transparency for messages */
+    width: 900px; /* Full width */
+}
+
+#message-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Space above the form */
+    width: 900px; /* Full width */
+    /* background-color: rgba(255, 255, 255, 0.6); Transparent white background for the form */
+    border-radius: 5px; /* Optional: rounded corners */
+    padding: 10px; /* Optional: padding for form */
+}
+
+#message {
+    width: 500px; /* Set the width of the input */
+    padding: 10px; /* Optional: padding for input */
+    border: 1px solid #ccc; /* Add border to input */
+    border-radius: 5px; /* Optional: rounded corners for input */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for input */
+}
+
+#send-button {
+    margin-left: 10px; /* Space between input and button */
+    padding: 10px; /* Optional: padding for button */
+    background-color: green; /* Set background color to red */
+    color: black; /* Set text color to white */
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+#send-button:hover {
+    background-color: green; /* Darker red on hover */
+}

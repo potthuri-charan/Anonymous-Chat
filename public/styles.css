@@ -1,0 +1,87 @@
+/* public/styles.css */
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f0f0f0; */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height: 100vh; /* Full height of the viewport */
+    background-image: url("https://4kwallpapers.com/images/walls/thumbs_3t/19136.jpg");
+    background-size: cover; 
+    background-position: center;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* White background for the box */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    width: 300px; /* Set a width for the box */
+}
+
+input, button {
+    width: 100%; /* Full width */
+    padding: 10px;
+    margin: 10px 0; /* Space between inputs and buttons */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+/* Additional Styles for Sign Up Page */
+.signup-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    width: 300px; /* Set a width for the signup box */
+    margin: auto; /* Center the signup box */
+}
+
+.signup-input, .signup-button {
+    width: 100%; /* Full width */
+    padding: 10px;
+    margin: 10px 0; /* Space between inputs and buttons */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.signup-button {
+    background-color: #4CAF50; /* Green button for signup */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup-button:hover {
+    background-color: #45a049;
+}
+
+#login-button {
+    background-color: transparent; /* Transparent background */
+    color: #4CAF50; /* Green text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    border: none; /* Remove border */
+}
+
+#login-button:hover {
+    text-decoration: underline; /* Underline on hover */
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chat.css">
+    <title>Chat</title>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Anonymous Chat</h1>
+        <button id="logout">Logout</button>
+    </div>
+    <div class="container">
+        <div id="messages"></div>
+        <form id="message-form">
+            <input id="message" autocomplete="off" placeholder="Type a message..." required />
+            <button type="submit" id="send-button">Send</button>
+        </form>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        const username = prompt("Please enter your username:"); // Prompt for username
+
+        // Handle form submission
+        document.getElementById('message-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const msg = document.getElementById('message').value;
+            const messageToSend = `${username}: ${msg}`; // Prepend username to the message
+            socket.emit('chat message', messageToSend);
+            document.getElementById('message').value = '';
+        });
+
+        // Listen for incoming messages
+        socket.on('chat message', function(msg) {
+            const messagesDiv = document.getElementById('messages');
+            const messageElement = document.createElement('div');
+            messageElement.textContent = msg;
+            messagesDiv.appendChild(messageElement);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight; // Scroll to bottom
+        });
+
+        // Handle logout button click
+        document.getElementById('logout').addEventListener('click', function() {
+            // Redirect to login page
+            window.location.href = 'index.html'; // Adjust this to your login page URL
+        });
+    </script>
+</body>
+</html>
